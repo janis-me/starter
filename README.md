@@ -2,6 +2,7 @@
 
 Repo template for my repositories. Based on pnpm workspaces, and includes default setup for:
 
+- [Github actions](https://github.com)
 - [PNPM catalogs](https://pnpm.io/catalogs)
 - [Testing (vitest/playwright)](https://vitest.dev/)
 - [Formatting (Prettier)](https://prettier.io/)
@@ -15,6 +16,12 @@ By default, the following commands are available across the repo:
 - `pnpm format` to format all packages with prettier
 - `pnpm lint` for linting all packages (respects each packages overrides)
 - `pnpm test` to run all tests using `vitest`.
+
+## Github
+
+There are two workflows defined by default. First, when you open PRs or push to the branches `main` or `development`, all unit tests will run. Secondly, when pushing tags starting with `v` and a semantic version, all packages will be published (if configured and not private), and a changelog will be generated that's put into a new github release.
+
+For this to work, you need to set a `NPM_TOKEN` in your github env. The publish workflow uses a github environment called `propd`, but you can of course change that.
 
 ## Testing
 
