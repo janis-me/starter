@@ -98,6 +98,15 @@ importers:
         specifier: catalog:test
         version: 3.1.4(@types/node@22.15.23)(@vitest/browser@3.1.4)(jiti@2.4.2)(yaml@2.7.1)
 
+  packages/example:
+    devDependencies:
+      '@janis.me/linter-config':
+        specifier: workspace:*
+        version: link:../linter-config
+      '@janis.me/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+
   packages/linter-config:
     devDependencies:
       '@eslint/js':
