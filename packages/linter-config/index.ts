@@ -27,6 +27,8 @@ export const baseConfig: ConfigArray = tseslint.config(
   },
   {
     rules: {
+      // We should always use `import type` for type-only imports
+      '@typescript-eslint/consistent-type-imports': 'error',
       // A good rule, but we sometimes want to include redundant types for documentation purposes
       '@typescript-eslint/no-redundant-type-constituents': 'warn',
       // Allow the `T[]` syntax for simple types, but require `Array<T>` for more complex types
@@ -49,6 +51,15 @@ export const baseConfig: ConfigArray = tseslint.config(
           destructuredArrayIgnorePattern: '^_',
           varsIgnorePattern: '^_',
           ignoreRestSiblings: true,
+        },
+      ],
+      // Used to allow `this: void` in methods, so that @typescript-eslint/unbound-method can be silenced properly
+      // note that often, it should be preferable to disable the unbound-method rule instead
+      // see https://bsky.app/profile/janis.me/post/3lrgjseighs2s
+      '@typescript-eslint/no-invalid-void-type': [
+        'error',
+        {
+          allowAsThisParameter: true,
         },
       ],
     },
