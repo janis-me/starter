@@ -54,6 +54,8 @@ export const baseConfig: ConfigArray = tseslint.config(
         },
       ],
       // Used to allow `this: void` in methods, so that @typescript-eslint/unbound-method can be silenced properly
+      // note that often, it should be preferable to disable the unbound-method rule instead
+      // see https://bsky.app/profile/janis.me/post/3lrgjseighs2s
       '@typescript-eslint/no-invalid-void-type': [
         'error',
         {
