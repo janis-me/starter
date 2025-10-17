@@ -1,5 +1,5 @@
 {
-  "name": "@janis.me/linter-config",
+  "name": "@workspace/linter-config",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -8,8 +8,8 @@
   },
   "devDependencies": {
     "@eslint/js": "catalog:lint",
-    "@janis.me/typescript-config": "workspace:*",
     "@types/node": "catalog:types",
+    "@workspace/typescript-config": "workspace:*",
     "eslint": "catalog:lint",
     "eslint-plugin-react": "catalog:lint",
     "eslint-plugin-react-hooks": "catalog:lint",
