@@ -1,11 +1,10 @@
 {
-  "name": "@janis.me/starter-example",
+  "name": "my-example-package",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "imports": {
     "#*": [
-      "./src/*",
       "./src/*.ts",
       "./src/*.tsx",
       "./src/*/index.ts"
@@ -13,10 +12,10 @@
   },
   "main": "src/index.ts",
   "scripts": {
-    "format": "prettier . --write"
+    "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@janis.me/linter-config": "workspace:*",
-    "@janis.me/typescript-config": "workspace:*"
+    "@workspace/linter-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*"
   }
 }
