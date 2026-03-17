@@ -1,3 +1,3 @@
-import type { MyExampleType } from '@workspace/lib';
+import type { MyExampleType } from "@workspace/lib";
 
-export const x: MyExampleType = 'example';
+export const x: MyExampleType = "example";
